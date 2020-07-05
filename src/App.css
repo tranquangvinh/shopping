@@ -1,0 +1,208 @@
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card{
+  border: none;
+  box-shadow: 0 0px 6px #ddd;
+  transition: all .6s;
+}
+
+.card .img-card{
+  padding-top: 100%;
+  position: relative;
+}
+.card .img-card img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #EAEAEA;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+ 
+}
+.card:hover{
+  transform: scale(1.05);
+}
+.card .price-sale{
+  font-size: 15px;
+  text-decoration-line: line-through;
+}
+.card .price{
+  font-size: 18px;
+  color: red;
+  font-weight: 600;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+.icon-order{
+  width: 50px;
+  height: auto;
+  transition: all .6s;
+  position: relative;
+}
+.icon-order .card-count{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgb(74, 74, 74);
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  line-height: 20px;
+  margin-left: 9px;
+  font-size: 10px;
+  font-weight: 700;
+  background: red;
+  border-radius: 2px;
+  padding: 0px 6px;
+  color: white;
+}
+.icon-order:hover{
+  box-shadow: 0 0px 6px #ddd;
+}
+.order:not(:last-child){
+  border-bottom: 1px solid #efefef;
+
+}
+.order .price{
+  color: red;
+}
+.order .thumbnail{
+  width: 130px;
+}
+.order .product-content{
+  width: calc(100% - 130px);
+}
+.order .info{
+  font-size: 20px;
+}
+.order .info .title{
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.order .info .des{
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.order .info .remove-product{
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration-line: underline;
+  color:#007bff;
+}
+.box-count{
+  display: flex;
+  flex-wrap: nowrap;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(200, 200, 200);
+  border-image: initial;
+  border-radius: 3px;
+  height: 37px;
+}
+.box-count input{
+  width: 35px;
+  text-align: center;
+  font-size: 13px;
+  -webkit-appearance: none;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  background: transparent;
+  margin: 0px;
+  height: 35px;
+}
+.qty-decrease {
+  display: inline-block;
+  color: rgb(153, 153, 153);
+  cursor: pointer;
+  border-right: 1px solid rgb(200, 200, 200);
+  padding: 6px 12px;
+}
+.qty-decrease.disable{
+  cursor: no-drop;
+}
+.qty-increase {
+  display: inline-block;
+  color: rgb(153, 153, 153);
+  cursor: pointer;
+  border-left: 1px solid rgb(200, 200, 200);
+  padding: 6px 12px;
+}
+.order-list{
+  box-shadow: 0 0px 6px #ddd;
+}
+.order .thumbnail{
+   transition: all .6s;
+}
+
+.order .thumbnail:hover{
+  transform: scale(1.1);
+}
+.total{
+  font-size: 20px;
+}
+.total-price{
+  color: red;
+}
+.title-top{
+    padding: 10px 10px;
+    background: #efefef;
+    color: black;
+    text-transform: capitalize;
+}
+@media (max-width: 767px){
+  .order .info .des{
+    font-size: 14px;
+  }
+  .order .info{
+    font-size: 16px;
+  }
+}
+.box-list-product{
+  position: relative;
+}
+.box-list-product .icon-order{
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
